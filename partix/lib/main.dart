@@ -10,11 +10,11 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SupabaseConnect.init();
   await setup();
-/*
+
   OneSignal.initialize("c84c1557-1479-4080-9c51-1794438ed802");
   OneSignal.Notifications.requestPermission(true);
   await OneSignal.login('2');
-*/
+
   LocationPermission permission = await Geolocator.checkPermission();
 
   if (permission == LocationPermission.denied ||

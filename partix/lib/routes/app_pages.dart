@@ -14,7 +14,7 @@ import 'package:partix/features/splash/presentation/pages/splash_page.dart';
 import 'app_routes.dart';
 
 final router = GoRouter(
-  initialLocation: '/login',
+  initialLocation: '/splash',
   navigatorKey: GlobalNavigation.instance.navigatorKey,
   routes: [
     GoRoute(

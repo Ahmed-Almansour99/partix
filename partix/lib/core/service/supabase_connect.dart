@@ -67,14 +67,10 @@ class SupabaseConnect {
 
       log('supabase clint : ${supabase!.client} ');
       log('supabase clint auth : ${supabase!.client.auth} ');
-      final userAuth = await supabase!.client.auth
-          .signInWithPassword(email: email, password: password)
-          .timeout(
-            Duration(seconds: 10),
-            onTimeout: () {
-              throw Exception("⏰ Timeout: Supabase did not respond.");
-            },
-          );
+      final userAuth = await supabase!.client.auth.signInWithPassword(
+        email: email,
+        password: password,
+      );
       debugPrint("response userauth  : ${userAuth}");
 
       if (userAuth.user != null) {

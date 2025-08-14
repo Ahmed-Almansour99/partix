@@ -17,7 +17,7 @@ class SplashPage extends StatelessWidget {
           if (state is FirstTimeUseApp) {
             context.pushReplacement(Routes.onboarding);
           } else if (state is NotFirstTimeUseApp) {
-            context.pushReplacement(Routes.login);
+            context.pushReplacement(Routes.home);
           }
         },
         child: Scaffold(
